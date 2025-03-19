@@ -1,21 +1,24 @@
+import { Outlet, NavLink } from "react-router-dom";
+
 const Navigation = () => {
   return (
-    <div>
-      <nav className="container">
-        <div className="logo">
-          <img src="/images/brand_logo.jpg" alt="logo" className="logoBrand" />
-        </div>
-
+    <>
+      <nav>
         <ul>
-          <li href="#">Menu</li>
-          <li href="#">Location</li>
-          <li href="#">About</li>
-          <li href="#">Contact</li>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/blogs">Blogs</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contactus">Contact</NavLink>
+          </li>
         </ul>
-
-        <button>Login</button>
       </nav>
-    </div>
+
+      <Outlet />
+    </>
   );
 };
 
