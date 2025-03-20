@@ -1,9 +1,14 @@
 import { Outlet, NavLink } from "react-router-dom";
 
+import styles from "./Navigation.module.css";
+
 const Navigation = () => {
   return (
-    <>
-      <nav>
+    <div>
+      <nav className={styles.navigation}>
+        <div className="logo">
+          <img src="/images/brand_logo.jpg" alt="logo" className="logoBrand" />
+        </div>
         <ul>
           <li>
             <NavLink to="/">Home</NavLink>
@@ -15,10 +20,10 @@ const Navigation = () => {
             <NavLink to="/contactus">Contact</NavLink>
           </li>
         </ul>
+        <button>Login</button>
       </nav>
-
       <Outlet />
-    </>
+    </div>
   );
 };
 

@@ -1,7 +1,9 @@
+import styles from "./Navigation.module.css";
+
 const HeroSection = () => {
   return (
     <>
-      <main className="hero container">
+      <main className={`hero ${styles.navigation}`}>
         <div className="hero-content">
           <h1>YOUR FEET DESERVE THE BEST</h1>
           <p>
