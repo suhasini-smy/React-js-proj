@@ -1,0 +1,7 @@
+501  npm create vite@latest
+502  cd project-1/
+503  npm install
+504  npm run dev
+505  npm run dev
+506  npm run dev
+507  history
