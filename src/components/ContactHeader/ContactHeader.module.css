@@ -589,3 +589,30 @@ body {
     width: 100%;
   }
 }
+
+.btn_gap {
+  background: #223593 !important;
+  margin-left: 20px;
+}
+
+.outline_btn {
+  padding: 18px 10px;
+  border: 1px solid black;
+  color: black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 220px;
+  font-size: 16px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.primary_btn {
+  gap: 8px;
+  min-width: 220px;
+  font-size: 16px;
+  justify-content: center;
+  cursor: pointer;
+}

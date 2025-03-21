@@ -20,7 +20,7 @@ const Navigation = () => {
             <NavLink to="/contactus">Contact</NavLink>
           </li>
         </ul>
-        <button>Login</button>
+        <button className="btn-color">Login</button>
       </nav>
       <Outlet />
     </div>

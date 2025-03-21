@@ -28,10 +28,13 @@ body {
 button {
   all: unset;
   padding: 6px 16px;
-  background: var(--red);
   height: 32px;
   color: white;
   font-weight: 500;
+}
+
+.btn-color {
+  background: var(--red);
 }
 
 .hero {

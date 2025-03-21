@@ -4,16 +4,12 @@ import Blogs from "./components/Blogs";
 import ContactUs from "./components/ContactUs";
 import NoPage from "./components/NoPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import "./App.css";
 
 export const App = () => {
   return (
     <BrowserRouter>
       <div>
-        {/* <Navigation /> */}
-        {/* <HeroSection /> */}
-
         <Routes>
           <Route path="/" element={<Navigation />}>
             <Route index element={<Home />} />

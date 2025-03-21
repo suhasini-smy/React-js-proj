@@ -1,15 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ContactHeader.module.css";
 import { MdMessage } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import Button from "./Button";
+import { HiMail } from "react-icons/hi";
 
 const ContactHeader = () => {
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [pnum, setPnum] = useState("");
+
+  const onViaCallSUbmit = () => {
+    console.log("I am from call");
+  };
+
+  const OnSubmit = (e) => {
+    e.preventDefault();
+    setFname(e.target[0].value);
+    setLname(e.target[1].value);
+    setEmail(e.target[2].value);
+    setPnum(e.target[3].value);
+    setAddress(e.target[4].value);
+  };
+
   return (
     <div>
       <div className={styles.contact_us_2}>
         <div className={`big_container ${styles.responsive_container_block} `}>
           <div className={styles.blueBG}></div>
           <div className={`container ${styles.responsive_container_block}`}>
-            <form className={styles.form_box}>
+            <Button
+              onClick={onViaCallSUbmit}
+              isoutline={true}
+              icon={<HiMail />}
+              contentbtn1="Via Support"
+              contentbtn2="Via Call"
+            />
+            <form className={styles.form_box} onSubmit={OnSubmit}>
               <div className={`form_wrapper ${styles.container_block}`}>
                 <p className={`${styles.text_blk}  contactus_head`}>
                   Get in Touch
@@ -27,8 +56,8 @@ const ContactHeader = () => {
                     </p>
                     <input
                       className={styles.input}
-                      id="ijowk"
-                      name="FirstName"
+                      id="fname"
+                      name="fname"
                       placeholder="Please enter first name..."
                     />
                   </div>
@@ -40,8 +69,8 @@ const ContactHeader = () => {
                     </p>
                     <input
                       className={styles.input}
-                      id="indfi"
-                      name="Last Name"
+                      id="lname"
+                      name="lname"
                       placeholder="Please enter last name..."
                     />
                   </div>
@@ -51,8 +80,8 @@ const ContactHeader = () => {
                     <p className={`${styles.text_blk} input_title`}>EMAIL</p>
                     <input
                       className={styles.input}
-                      id="ipmgh"
-                      name="Email"
+                      id="email"
+                      name="email"
                       placeholder="Please enter email..."
                     />
                   </div>
@@ -64,8 +93,8 @@ const ContactHeader = () => {
                     </p>
                     <input
                       className={`${styles.input}`}
-                      id="imgis"
-                      name="PhoneNumber"
+                      id="pnum"
+                      name="pnum"
                       placeholder="Please enter phone number..."
                     />
                   </div>
@@ -78,7 +107,8 @@ const ContactHeader = () => {
                     </p>
                     <textarea
                       className={styles.textinput}
-                      id="i5vyy"
+                      id="area"
+                      name="area"
                       placeholder="Please enter query..."
                     ></textarea>
                   </div>
@@ -88,33 +118,15 @@ const ContactHeader = () => {
                   Submit
                 </button>
               </div>
-              {/* <div className={styles.social_media_links}>
-                <a href="#" id="ix94i_2">
-                  <img
-                    className={styles.link_img}
-                    src="https://workik_widget_assets.s3.amazonaws.com/Footer1_83/v1/images/Icon_twitter.png"
-                  />
-                </a>
-                <a href="#">
-                  <img
-                    className={styles.link_img}
-                    src="https://workik_widget_assets.s3.amazonaws.com/Footer1_83/v1/images/Icon_facebook.png"
-                  />
-                </a>
-                <a href="#">
-                  <img
-                    className={styles.link_img}
-                    src="https://workik_widget_assets.s3.amazonaws.com/Footer1_83/v1/images/Icon_google.png"
-                  />
-                </a>
-                <a href="#" id="izldf_2">
-                  <img
-                    className={styles.link_img}
-                    src="https://workik_widget_assets.s3.amazonaws.com/Footer1_83/v1/images/Icon_instagram.png"
-                  />
-                </a>
-              </div> */}
             </form>
+
+            <div>
+              <p>{fname + "--first name--"}</p>
+              <p>{lname + "--lname--"}</p>
+              <p>{email + "--email--"}</p>
+              <p>{pnum + "--pnumber--"}</p>
+              <p>{address + "--address--"}</p>
+            </div>
           </div>
         </div>
       </div>
